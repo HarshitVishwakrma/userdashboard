@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
   // Fetch the latest user data (for points refresh)
   const refreshUserData = async () => {
     try {
-      const response = await fetch('http://localhost:7000/api/user/v1/get-users-info-id', {
+      const response = await fetch('https://chatappbackend-foxvyvww0-harshits-projects-548ba978.vercel.app/api/user/v1/get-users-info-id', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('authToken')}`,
         },

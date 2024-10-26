@@ -16,6 +16,7 @@ const Home = () => {
     if(!user){
       navigate('/login');
     }
+    console.log('fetching user data')
     fetch("https://userdashboardbackend.vercel.app/api/user/v1/get-users", {
       method : 'GET',
       credentials : 'include'

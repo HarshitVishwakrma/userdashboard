@@ -20,7 +20,7 @@ const Leaderboard = () => {
       navigate('/login')
     }
 
-    fetch('http://localhost:7000/api/user/v1/get-users')
+    fetch('https://chatappbackend-foxvyvww0-harshits-projects-548ba978.vercel.app/api/user/v1/get-users')
       .then((res) => res.json())
       .then((data) => {
         const sortedUsers = data.data.sort((a, b) => b.Points - a.Points);

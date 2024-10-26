@@ -20,7 +20,6 @@ const Home = () => {
     fetch("https://userdashboardbackend.vercel.app/api/user/v1/get-users", {
       mode : 'cors',
       method : 'GET',
-      credentials : 'include'
     })
       .then((res) => res.json())
       .then((data) => {

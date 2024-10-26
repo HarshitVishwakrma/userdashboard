@@ -7,7 +7,7 @@ const PointHistoryModal = ({ user, onClose }) => {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const response = await fetch('http://localhost:7000/api/user/v1/your-history', {
+        const response = await fetch('https://chatappbackend-foxvyvww0-harshits-projects-548ba978.vercel.app/api/user/v1/your-history', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ username : user.username}),

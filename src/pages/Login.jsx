@@ -21,7 +21,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:7000/api/auth/v1/login', {
+    const response = await fetch('https://chatappbackend-foxvyvww0-harshits-projects-548ba978.vercel.app/api/auth/v1/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username, password }),

@@ -16,7 +16,7 @@ const Home = () => {
     if(!user){
       navigate('/login');
     }
-    fetch("http://localhost:7000/api/user/v1/get-users")
+    fetch("https://chatappbackend-foxvyvww0-harshits-projects-548ba978.vercel.app/api/user/v1/get-users")
       .then((res) => res.json())
       .then((data) => {
         console.log(user)
@@ -29,7 +29,7 @@ const Home = () => {
 
   const claimPoints = async (username) => {
     try {
-      await fetch("http://localhost:7000/api/user/v1/claim-points", {
+      await fetch("https://chatappbackend-foxvyvww0-harshits-projects-548ba978.vercel.app/api/user/v1/claim-points", {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username }),

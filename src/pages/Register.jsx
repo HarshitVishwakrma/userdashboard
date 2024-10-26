@@ -13,7 +13,7 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('https://chatappbackend-foxvyvww0-harshits-projects-548ba978.vercel.app/api/auth/v1/register', {
+    const response = await fetch('https://userdashboardbackend.vercel.app/api/auth/v1/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ firstName, lastName ,username, email, password }),

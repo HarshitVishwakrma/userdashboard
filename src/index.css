@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* index.css */
+.form-container {
+    @apply bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto;
+  }
+  .input-field {
+    @apply w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+  .submit-button {
+    @apply w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 transition-all;
+  }
+  

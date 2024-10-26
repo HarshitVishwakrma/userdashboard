@@ -24,6 +24,7 @@ const Login = () => {
     const response = await fetch('https://chatappbackend-foxvyvww0-harshits-projects-548ba978.vercel.app/api/auth/v1/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
+      credentials: 'include'
       body: JSON.stringify({ username, password }),
     });
     const data = await response.json();

@@ -7,7 +7,7 @@ const PointHistoryModal = ({ user, onClose }) => {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const response = await fetch('https://userdashboardbackend.vercel.app/api/user/v1/your-history', {
+        const response = await fetch('https://leaderboard-gules.vercel.app/api/user/v1/your-history', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ username : user.username}),

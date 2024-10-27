@@ -20,7 +20,7 @@ const Leaderboard = () => {
       navigate('/login')
     }
 
-    fetch('https://userdashboardbackend.vercel.app/api/user/v1/get-users')
+    fetch('https://leaderboard-gules.vercel.app/api/user/v1/get-users')
       .then((res) => res.json())
       .then((data) => {
         const sortedUsers = data.data.sort((a, b) => b.Points - a.Points);

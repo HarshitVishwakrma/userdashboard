@@ -17,7 +17,7 @@ const Home = () => {
       navigate('/login');
     }
     console.log('fetching user data')
-    fetch("https://leaderboard-gules.vercel.app/api/user/v1/get-users")
+    fetch("https://leaderboard-gules.vercel.app/api/user/v1/get-users",{ credentials: 'include'})
       .then((res) => res.json())
       .then((data) => {
         console.log(user)

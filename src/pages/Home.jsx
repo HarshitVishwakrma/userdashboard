@@ -17,7 +17,7 @@ const Home = () => {
       navigate('/login');
     }
     console.log('fetching user data')
-    fetch("https://userdashboardbackend.vercel.app/api/user/v1/get-users")
+    fetch("https://leaderboard-gules.vercel.app/api/user/v1/get-users")
       .then((res) => res.json())
       .then((data) => {
         console.log(user)
@@ -30,7 +30,7 @@ const Home = () => {
 
   const claimPoints = async (username) => {
     try {
-      await fetch("https://userdashboardbackend.vercel.app/api/user/v1/claim-points", {
+      await fetch("https://leaderboard-gules.vercel.app/api/user/v1/claim-points", {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username }),
@@ -38,7 +38,7 @@ const Home = () => {
 
       // Refresh and sort the friend list again
       const updatedFriends = await fetch(
-        "http://localhost:7000/api/user/v1/get-users"
+        "https://leaderboard-gules.vercel.app/api/user/v1/get-users"
       ).then((res) => res.json());
 
       const filteredUpdatedFriends = updatedFriends.data.filter(friend => friend._id !== user.data._id);

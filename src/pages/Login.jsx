@@ -21,7 +21,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('https://userdashboardbackend.vercel.app/api/auth/v1/login', {
+    const response = await fetch('https://leaderboard-gules.vercel.app/api/auth/v1/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials : 'include',
